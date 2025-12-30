@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Beautiful Girlfriend 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="hearts-background">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="header-text">Loved you yesterday, love you still, always have, always will</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 class="hero-title">To My Beautiful Girlfriend 💕</h2>
+        <p class="hero-subtitle">Even when you're dead, you'll be better than anyone still alive</p>
+        <div class="decorative-hearts">
+            <span>✨</span>
+            <span>💖</span>
+            <span>✨</span>
+        </div>
+    </section>
+
+    <!-- Main Message Card -->
+    <section class="message-section">
+        <div class="message-card">
+            <h3 class="message-title">💌 My Love to You</h3>
+            <p class="message-content">
+                When I say I love you more, I don't just mean I love you more than you love me. 
+                I mean I love you more than the bad days ahead of us, I love you more than any 
+                fight we will ever have. I love you more than the distance between us, I love 
+                you more than any obstacle that could try and come between us. I love you the most.
+            </p>
+        </div>
+    </section>
+
+    <!-- Interactive Cards Section -->
+    <section class="interactive-section">
+        <h2 class="section-title">Our Love</h2>
+        <div class="cards-container">
+            <!-- Us Card -->
+            <div class="interactive-card" onclick="openGallery()">
+                <div class="card-icon">💑</div>
+                <h3 class="card-title">Us</h3>
+                <p class="card-description">Our beautiful moments together</p>
+            </div>
+
+            <!-- Distance Card -->
+            <div class="interactive-card" onclick="openDistance()">
+                <div class="card-icon">🌍</div>
+                <h3 class="card-title">Distance</h3>
+                <p class="card-description">Miles apart, hearts together</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGallery()">&times;</span>
+            <div class="gallery-container">
+                <button class="gallery-nav prev" onclick="changePhoto(-1)">&#10094;</button>
+                <div class="photo-display">
+                    <img id="galleryImage" src="" alt="Our Photo">
+                    <div class="photo-counter"><span id="currentPhoto">1</span> / 4</div>
+                </div>
+                <button class="gallery-nav next" onclick="changePhoto(1)">&#10095;</button>
+            </div>
+            <div class="gallery-dots">
+                <span class="dot" onclick="goToPhoto(0)"></span>
+                <span class="dot" onclick="goToPhoto(1)"></span>
+                <span class="dot" onclick="goToPhoto(2)"></span>
+                <span class="dot" onclick="goToPhoto(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Distance Modal -->
+    <div id="distanceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDistance()">&times;</span>
+            <div class="distance-container">
+                <h3>Our Distance</h3>
+                <div id="map"></div>
+                <div class="distance-info">
+                    <p class="distance-text">3,067 km (1,906 miles)</p>
+                    <p class="locations">Taiwan (Shalu) 🇹🇼 ↔️ Mongolia (Ulaanbaatar) 🇲🇳</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
